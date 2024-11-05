@@ -17,10 +17,64 @@
         <link rel="stylesheet" href="example.css">
     </head>
     <body>
-        <input type="text" id="urlInput" placeholder="Enter URL here">
-        <button id="searchButton">Search Text</button>
+  <div class="home-container">
+    <span>
+      <h1 class="logo" style="font-size: 4em;">centurion</h1>
+      <br />
+    </span>
+    <div class="home-container1">
+      <div class="home-container2">
+        <div class="home-container3">
+          <form class="home-form" id="form">
+            <input autocomplete="on" type="text" placeholder="🔎 Search or Type a URL" required="" name="q"
+              value="" class="home-textinput input" id="urlInput" />
+          </form><br />
+        </div>
+      </div>
+    </div>
+    <div class="desc">
+        <p>Xploit is the proxy of the future.</p>
+    </div>
+  </div>
+  <style>
+    footer {
+    margin-top: auto;
+    width: 100%;
+    align-self: center;
+    height: 80px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+      position: absolute;
+      bottom: 2px;
+}
 
-        <iframe id="iframeWindow" class="iframeWindow"></iframe>
-    </body>
+footer a,
+footer span {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #FFF;
+    font-size: 15px;
+    font-family: sans-serif;
+}
+
+footer a {
+    cursor: pointer;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+  </style>
+   <footer>
+        <a title="XPLOIT" href="https://github.com/xploitclient">Github</a>
+        <a title="Our Discord" href="https://xploit-client.repl.co/discord/">Discord</a>
+        <a title="Our Website" href="https://xploit-client.repl.co">XPLOIT</a>
+        <a title="Claim Warranty" href="https://xploit-client.repl.co/warranty/">Warranty</a>
+
+        <a title="LICENSE" href="https://github.com/xploitclient/terms/blob/main/LICENSE" style="margin-left: auto">License</a>
+        <span title="XPLOIT">XPLOIT &copy; 2023. All Rights Reserved.</span>
+    </footer>
+</body>
     <script src="example.js"></script>
 </html>
