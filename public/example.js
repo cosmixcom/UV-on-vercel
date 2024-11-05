@@ -25,3 +25,7 @@ document.getElementById("form").addEventListener('submit', (event) => {
 
     
 });
+
+if (new URLSearchParams(location.search).get('q')) {
+    window.location = __uv$config.prefix + __uv$config.encodeUrl(new URLSearchParams(location.search).get('q'));
+}
