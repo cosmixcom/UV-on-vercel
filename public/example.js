@@ -24,4 +24,4 @@ document.getElementById("form").addEventListener('submit', (event) => {
     window.location = __uv$config.prefix + __uv$config.encodeUrl(url);
 
     
-};
+});
