@@ -7,7 +7,7 @@
 //         }
 //     });
 
-document.getElementById("form").onsubmit = function (event) {
+document.getElementById("form").addEventListener('submit', (event) => {
     event.preventDefault();
 
     let url = document.getElementById("urlInput").value; // if no periods are detected in the input, search google instead
