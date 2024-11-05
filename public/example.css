@@ -1,41 +1,117 @@
 .iframeWindow {
-    position: absolute;
+    position: fixed;
     width: 100vw;
-    height: 90vh;
+    height: 100vh;
     border: 0;
     padding: 0;
     margin: 0;
     left: 0;
     bottom: 0;
     background-color: #fff;
+    z-index: 99999;
 }
 
-#urlInput {
-    position: absolute;
-    padding: 0em;
-    padding-left: 0.5em;
-    margin: 0;
-    left: 0;
-    top: 0;
-    width: 80vw;
-    height: 10vh;
-    border: 0;
-    outline: 0;
-    color: aliceblue;
-    background-color: #25252a;
-    font-size: 5vh;
+/* Dark mode theme for SearchApp with gold accents */
+:root {
+    --gold-primary: #FFD700;
+    --gold-secondary: #DAA520;
+    --gold-highlight: #FFF0AC;
+    --dark-bg: #1A1A1A;
+    --darker-bg: #121212;
+    --text-color: #E0E0E0;
 }
 
-#searchButton {
-    position: absolute;
+body {
+    background-color: var(--dark-bg);
+    color: var(--text-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
-    right: 0;
-    top: 0;
-    width: 20vw;
-    height: 10vh;
-    border: 0;
-    outline: 0;
-    color: #141414;
-    background-color: aliceblue;
-    font-size: 5vh;
+    padding: 20px;
+    min-height: 100vh;
+    background: linear-gradient(145deg, var(--dark-bg), var(--darker-bg));
+}
+
+input[type="text"] {
+    width: 70%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 2px solid var(--gold-secondary);
+    border-radius: 25px;
+    background-color: var(--darker-bg);
+    color: var(--text-color);
+    font-size: 16px;
+    transition: all 0.3s ease;
+    /* Metallic effect */
+    background-image: linear-gradient(
+        175deg,
+        rgba(255, 255, 255, 0.05) 0%,
+        rgba(255, 255, 255, 0) 60%
+    );
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: var(--gold-primary);
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
+}
+
+input[type="text"]::placeholder {
+    color: rgba(218, 165, 32, 0.6);
+}
+
+button {
+    padding: 12px 25px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(
+        145deg,
+        var(--gold-primary),
+        var(--gold-secondary)
+    );
+    color: var(--darker-bg);
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    /* Metallic effect */
+    background-image: linear-gradient(
+        175deg,
+        rgba(255, 255, 255, 0.15) 0%,
+        rgba(255, 255, 255, 0) 60%
+    );
+    box-shadow: 
+        0 4px 6px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 
+        0 6px 12px rgba(0, 0, 0, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    background: linear-gradient(
+        145deg,
+        var(--gold-highlight),
+        var(--gold-primary)
+    );
+}
+
+button:active {
+    transform: translateY(1px);
+    box-shadow: 
+        0 2px 4px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.iframeWindow {
+    width: 100%;
+    height: 70vh;
+    margin-top: 20px;
+    border: 2px solid var(--gold-secondary);
+    border-radius: 10px;
+    background-color: var(--darker-bg);
+    /* Metallic frame effect */
+    box-shadow: 
+        inset 0 0 10px rgba(0, 0, 0, 0.5),
+        0 0 15px rgba(255, 215, 0, 0.1);
 }
