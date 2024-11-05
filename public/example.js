@@ -19,7 +19,7 @@ document.getElementById("form").addEventListener('submit', (event) => {
         if (!url.startsWith("http://") && !url.startsWith("https://")) { // if no http or https is detected, add https automatically
             url = "https://" + url;
         }
-    // }
+    }
 
     window.location = __uv$config.prefix + __uv$config.encodeUrl(url);
 
